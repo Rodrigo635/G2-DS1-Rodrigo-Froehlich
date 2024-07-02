@@ -55,7 +55,7 @@ export default function Home() {
   if (loading) {
     return (
       <main className="container mx-auto mt-8 px-4">
-        <h1 className="text-3xl font-bold mb-8 text-center">Carregando...</h1>
+        <h1 className="text-3xl text-black font-bold mb-8 text-center">Carregando...</h1>
       </main>
     );
   }
@@ -63,10 +63,47 @@ export default function Home() {
   // Renderização da página de usuários
   return (
     <main className="container mx-auto mt-8 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-center">Users</h1>
-      {/* Formulário de filtro por nome */}
+      <h1 className="text-3xl text-gray-800 font-bold mb-8 text-center">Total</h1>
       <div className="flex mb-8 mt-8 justify-center items-center">
-        <input
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col mb-10">
+            <div className="px-6 py-4 flex-grow flex flex-col justify-between">
+              <h2 className="font-bold text-xl text-gray-700 text-center uppercase h-auto overflow-hidden">
+                Equipes Cadastradas 
+              </h2>
+            </div>
+            <div className="px-6 pb-4 flex items-center justify-center text-center">
+              <span className="inline-block w-[30%] rounded-md px-3 py-1 text-xl font-semibold text-gray-700">
+                5
+              </span>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col mb-10">
+            <div className="px-6 py-4 flex-grow flex flex-col justify-between">
+              <h2 className="font-bold text-xl text-gray-700 text-center uppercase h-auto overflow-hidden">
+                Avaliadores Cadastrados
+              </h2>
+            </div>
+            <div className="px-6 pb-4 flex items-center justify-center text-center">
+              <span className="inline-block w-[30%] rounded-md px-3 py-1 text-xl font-semibold text-gray-700">
+                5
+              </span>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col mb-10">
+            <div className="px-6 py-4 flex-grow flex flex-col justify-between">
+              <h2 className="font-bold text-xl text-gray-700 text-center uppercase h-auto overflow-hidden">
+                Notas Atribuídas
+              </h2>
+            </div>
+            <div className="px-6 pb-4 flex items-center justify-center text-center">
+              <span className="inline-block w-[30%] rounded-md px-3 py-1 text-xl font-semibold text-gray-700">
+                5
+              </span>
+            </div>
+          </div>
+        </section>
+        {/* <input
           type="text"
           placeholder="Filtrar por nome"
           value={searchTerm}
@@ -78,10 +115,10 @@ export default function Home() {
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
         >
           Filtrar
-        </button>
+        </button> */}
       </div>
       {/* Lista de usuários renderizada */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {/* Verificação se existem usuários a serem exibidos */}
         {filteredUsers.length > 0 ? (
           // Mapeamento e renderização dos usuários filtrados

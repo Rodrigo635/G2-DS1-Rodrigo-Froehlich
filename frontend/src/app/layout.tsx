@@ -11,25 +11,55 @@ export const metadata: Metadata = {
 // Componente de cabeçalho
 const Header = () => {
   return (
-    <header className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto">
+    <header className="bg-black text-white py-4">
+      <div className="container px-28 mx-auto">
         <nav className="flex justify-between items-center">
+          <Link href="/">
+            <h1 className="text-2xl hover:text-blue-500 transition-colors duration-300 cursor-pointer font-bold ">Hackathon Frontend</h1>
+          </Link>
           <div className="flex gap-5 items-center">
             <Link
-              className="text-white hover:text-gray-300 transition-colors duration-300 cursor-pointer"
+              className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
               href="/"
             >
-              Página Inicial
+              Início
             </Link>
             <Link
-              className="text-white hover:text-gray-300 transition-colors duration-300 cursor-pointer"
+              className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
               href="/newUser"
             >
-              Cadastrar Usuário
+              Cadastrar Avaliador
             </Link>
-          </div>
-          <div>
-            <Link href="/logout">Logout</Link>
+            <Link
+              className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
+              href="/newUser"
+            >
+              Avaliadores
+            </Link>
+            <Link
+              className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
+              href="/newUser"
+            >
+              Cadastrar Equipe
+            </Link>
+            <Link
+              className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
+              href="/newUser"
+            >
+              Equipes
+            </Link>
+            <Link
+              className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
+              href="/logout"
+            >
+              Login
+            </Link>
+            <Link
+              className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
+              href="/logout"
+            >
+              Logout
+            </Link>
           </div>
         </nav>
       </div>
@@ -40,8 +70,8 @@ const Header = () => {
 // Componente de rodapé
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-4 fixed bottom-0 w-full">
-      <div className="container mx-auto text-center">@The Best Sistemas</div>
+    <footer className="bg-black text-white py-4 fixed bottom-0 w-full">
+      <div className="container px-28 mx-auto">Code Race, 2023. Todos os direitos reservados.</div>
     </footer>
   );
 };
@@ -56,8 +86,10 @@ export default function RootLayout({
       <body>
         <Header />
         <div className="flex flex-col min-h-screen">
-          {children}
-          <Footer />
+          <div className="container px-24 mx-auto">
+            {children}
+          </div>
+        <Footer />
         </div>
       </body>
     </html>
