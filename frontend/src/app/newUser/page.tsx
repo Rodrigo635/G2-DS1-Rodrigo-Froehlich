@@ -70,100 +70,104 @@ export default function NewUser() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center my-8">
-      <form className="flex flex-col gap-3 p-12 items-center w-[50%] bg-slate-700 rounded-md border-white border-2 border-spacing-2">
-        <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>Nome Completo</label>
+      <form className="flex flex-col gap-3 p-12 items-center w-[50%] bg-white mb-28 shadow-lg rounded-md border-white border-2 border-spacing-2">
+        <div className="flex flex-col gap-3 items-start w-[97%]">
+          <h1 className="text-2xl text-black font-bold mb-4">
+            Cadastrar novo avaliador 
+          </h1>
+          <label className="text-black">Nome do novo avaliador</label>
           <input
             type="text"
             name="name"
             value={formDataUser.name}
             onChange={handleChange}
             placeholder="Nome completo"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 
-        <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>CPF</label>
+        <div className="flex flex-col gap-3 items-start w-[97%]">
+          <label className="text-black">CPF</label>
           <input
             type="text"
             name="cpf"
             value={formDataUser.cpf}
             onChange={handleChange}
             placeholder="xxx.xxx.xxx-xx"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 
-        <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>E-mail</label>
+        <div className="flex flex-col gap-3 items-start w-[97%]">
+          <label className="text-black">E-mail</label>
           <input
             type="text"
             name="email"
             value={formDataUser.email}
             onChange={handleChange}
             placeholder="E-mail"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 
-        <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>Data de Nascimento</label>
+        <div className="flex flex-col gap-3 items-start w-[97%]">
+          <label className="text-black">Data de Nascimento</label>
           <input
             type="date"
             name="birthdate"
             value={formDataUser.birthdate}
             onChange={handleChange}
             placeholder="Data de Nascimento"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 
-        <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>Login</label>
+        <div className="flex flex-col gap-3 items-start w-[97%]">
+          <label className="text-black">Login
+          </label>
           <input
             type="text"
             name="login"
             value={formDataUser.login}
             onChange={handleChange}
             placeholder="Login"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 
-        <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>Senha</label>
+        <div className="flex flex-col gap-3 items-start w-[97%]">
+          <label className="text-black">Senha</label>
           <input
             type="password"
             name="password"
             value={formDataUser.password}
             onChange={handleChange}
             placeholder="Senha"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 
-        <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>Tipo de Perfil</label>
+        <div className="flex flex-col gap-3 items-start justify-start w-[97%]">
+          <label className="text-black">Tipo de Perfil</label>
           <input
             type="text"
             name="profile"
             value={formDataUser.profile}
             onChange={handleChange}
             placeholder="Tipo de Perfil"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 
         <div className="flex flex-col gap-3 items-center justify-center w-[97%]">
-          <label>Status</label>
+          <label className="text-black">Status</label>
           <input
             type="checkbox"
             name="status"
             checked={formDataUser.status}
             onChange={handleChange}
             placeholder="Status"
-            className="border border-gray-300 w-[50%] rounded-md px-3 py-2 mb-3 text-black"
+            className="border border-gray-300 w-[100%] rounded-md px-3 py-2 mb-3 text-black"
           />
         </div>
 

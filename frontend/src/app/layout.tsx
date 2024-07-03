@@ -32,19 +32,19 @@ const Header = () => {
             </Link>
             <Link
               className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
-              href="/newUser"
+              href="/avaliadores"
             >
               Avaliadores
             </Link>
             <Link
               className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
-              href="/newUser"
+              href="/newEquipe"
             >
               Cadastrar Equipe
             </Link>
             <Link
               className="text-white hover:text-blue-500 transition-colors duration-300 cursor-pointer"
-              href="/newUser"
+              href="/equipes"
             >
               Equipes
             </Link>
