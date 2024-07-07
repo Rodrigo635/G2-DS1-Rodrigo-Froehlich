@@ -1,10 +1,12 @@
-import express from "express";
-import userRoutes from "./userRoutes";
-import addressRoutes from "./addressRoutes";
+import express from 'express';
+import avaliacaoRoutes from './avaliacaoRoutes';
+import avaliadorRoutes from './avaliadorRoutes';
+import equipeRoutes from './equipeRoutes';
 
 const appRouter = express();
 
-appRouter.use("/users", userRoutes);
-appRouter.use("/address", addressRoutes);
+appRouter.use('/avaliacao', avaliacaoRoutes);
+appRouter.use('/avaliador', avaliadorRoutes);
+appRouter.use('/equipe', equipeRoutes);
 
 export default appRouter;

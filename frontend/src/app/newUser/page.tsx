@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-//import axios from "axios";
 import api from "../../services/api";
 import { IUserFormData } from "@/interfaces/IUser";
 
