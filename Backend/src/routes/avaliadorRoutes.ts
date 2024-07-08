@@ -1,8 +1,8 @@
-import express from 'express';
+import { Router } from 'express';
 import AvaliadorController from '../controllers/avaliadorController';
 import { validateAvaliador } from '../middlewares/validationMiddleware';
 
-const router = express.Router();
+const router = Router();
 
 router.post('/', validateAvaliador, AvaliadorController.createAvaliador);
 router.get('/', AvaliadorController.getAvaliadores);
