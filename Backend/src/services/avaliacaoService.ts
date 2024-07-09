@@ -16,6 +16,10 @@ class AvaliacaoService {
     return this.avaliacaoModel.findAll();
   }
 
+  async updateAvaliacao(id: number): Promise<Avaliacao> {
+    return this.avaliacaoModel.update(id);
+  }
+
   async getAvaliacoesByEquipe(equipe_id: number): Promise<Avaliacao[]> {
     return this.avaliacaoModel.findByEquipe(equipe_id);
   }

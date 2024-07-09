@@ -22,6 +22,13 @@ class AvaliacaoModel {
     return result.rows;
   }
 
+  async update(id: number): Promise<Avaliacao> {
+    const result = await pool.query('SELECT * FROM avaliacoes WHERE id = $1', [
+      id,
+    ]);
+    return result.rows[0];
+  }
+
   async findByEquipe(equipe_id: number): Promise<Avaliacao[]> {
     const result = await pool.query(
       'SELECT * FROM avaliacoes WHERE equipe_id = $1',

@@ -1,1 +1,7 @@
-{}
+{
+  "/avaliadores/page": "app/avaliadores/page.js",
+  "/newEquipe/page": "app/newEquipe/page.js",
+  "/avaliacoes/page": "app/avaliacoes/page.js",
+  "/page": "app/page.js",
+  "/newAvaliacao/page": "app/newAvaliacao/page.js"
+}

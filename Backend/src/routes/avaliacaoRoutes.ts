@@ -6,6 +6,7 @@ const router = Router();
 
 router.post('/', validateAvaliacao, AvaliacaoController.createAvaliacao);
 router.get('/', AvaliacaoController.getAllAvaliacoes);
+router.put('/:id', validateAvaliacao, AvaliacaoController.updateAvaliacao);
 router.get('/equipe/:id', AvaliacaoController.getAvaliacoesByEquipe);
 router.get('/avaliador/:id', AvaliacaoController.getAvaliacoesByAvaliador);
 

@@ -9,4 +9,3 @@ app.use(cors());
 app.use("/api", appRouter);
 
 export default app;
-

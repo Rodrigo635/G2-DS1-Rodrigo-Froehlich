@@ -30,6 +30,16 @@ class AvaliacaoController {
     }
   }
 
+  async updateAvaliacao(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+    try {
+      const avaliacao = await avaliacaoService.updateAvaliacao(Number(id));
+      return res.status(200).json(avaliacao);
+    } catch (error) {
+      return res.status(500).json({ error: 'Erro ao atualizar avaliação!' });
+    }
+  }
+
   async getAvaliacoesByEquipe(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
     try {
