@@ -15,4 +15,5 @@ abrindo outro terminal
 <br/>npm i
 <br/>npm run dev
 <br/>
+<br/>Existem alguns resquícios de tentativa de fazer um login com o local storage, q eu comecei no backend e tentei implementar mas não funcionou e eu acabei desistindo :/
 <br/>E pronto! Se deus quiser vai rodar aí, na minha máquina funciona :)
