@@ -61,6 +61,7 @@ export default function Home() {
             </div>
           </div>
           </a>
+          <a href="/avaliacoes">
           <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col mb-10">
             <div className="px-6 py-4 flex-grow flex flex-col justify-between">
               <h2 className="font-bold text-xl text-gray-700 text-center uppercase h-auto overflow-hidden">
@@ -73,6 +74,7 @@ export default function Home() {
               </span>
             </div>
           </div>
+          </a>
         </section>
       </div>
     </main>

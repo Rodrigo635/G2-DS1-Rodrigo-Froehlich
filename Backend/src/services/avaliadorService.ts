@@ -1,5 +1,5 @@
- // src/services/avaliadorService.ts
  import { Avaliador, AvaliadorModel } from '../models/avaliadorModel';
+ const bcrypt = require("bcrypt");
 
  class AvaliadorService {
    private avaliadorModel: AvaliadorModel;
@@ -20,6 +20,15 @@
    async deleteAvaliador(id: number): Promise<void> {
      return this.avaliadorModel.delete(id);
    }
+
+   async loginAvaliador(login: string, senha: string): Promise<Avaliador | null> {
+    const avaliador = await this.avaliadorModel.findByLogin(login);
+
+    if (avaliador && await bcrypt.compare(senha, avaliador.senha)) {
+      return avaliador;
+    }
+    return null;
+  }
  }
  
  export default new AvaliadorService();

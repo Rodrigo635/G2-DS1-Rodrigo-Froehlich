@@ -8,6 +8,11 @@ const avaliadorSchema = Joi.object({
   senha: Joi.string().min(6).required(),
 });
 
+const loginSchema = Joi.object({
+  login: Joi.string().email().required(),
+  senha: Joi.string().min(6).required(),
+});
+
 class AvaliadorController {
   async createAvaliador(req: Request, res: Response): Promise<Response> {
     try {
@@ -44,6 +49,27 @@ class AvaliadorController {
       return res.status(200).json({ message: 'Avaliador deletado com sucesso!' });
     } catch (error) {
       return res.status(500).json({ error: 'Erro deletando avaliador!' });
+    }
+  }
+
+  async login(req: Request, res: Response): Promise<Response> {
+    try {
+      const { error, value } = loginSchema.validate(req.body);
+
+      if (error) {
+        return res.status(400).json({ error: error.details[0].message });
+      }
+
+      const { login, senha } = value;
+      const avaliador = await avaliadorService.loginAvaliador(login, senha);
+
+      if (avaliador) {
+        return res.status(200).json(avaliador);
+      } else {
+        return res.status(401).json({ error: 'Login ou senha inválidos!' });
+      }
+    } catch (error) {
+      return res.status(500).json({ error: 'Erro no login!' });
     }
   }
 }

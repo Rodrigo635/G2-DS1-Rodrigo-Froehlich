@@ -21,6 +21,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/loading.js"
     ],
+    "/avaliacoes/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/avaliacoes/page.js"
+    ],
     "/equipes/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -31,20 +36,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/avaliadores/page.js"
     ],
-    "/newAvaliador/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/newAvaliador/page.js"
-    ],
     "/newEquipe/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/newEquipe/page.js"
     ],
-    "/avaliacoes/page": [
+    "/newAvaliador/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/avaliacoes/page.js"
+      "static/chunks/app/newAvaliador/page.js"
     ],
     "/newAvaliacao/page": [
       "static/chunks/webpack.js",

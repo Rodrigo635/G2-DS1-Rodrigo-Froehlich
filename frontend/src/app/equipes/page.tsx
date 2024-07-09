@@ -72,7 +72,7 @@ export default function Equipes() {
 
         <tbody >
           {filteredEquipes.map((equipe) => (
-            <tr className="hover:bg-gray-100" key={equipe.id}>
+            <tr className="hover:bg-gray-200" key={equipe.id}>
               <td className="px-4 text-left text-black py-2 border-b">{equipe.id}</td>
               <td className="px-4 text-left text-black py-2 border-b">{equipe.nome}</td>
               <td className="px-4 text-left py-2 border-b">

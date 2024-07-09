@@ -1,4 +1,3 @@
-// src/models/avaliadorModel.ts
 import pool from '../database/dbConfig';
 
 interface Avaliador {
@@ -25,6 +24,11 @@ class AvaliadorModel {
 
   async delete(id: number): Promise<void> {
     await pool.query('DELETE FROM avaliadores WHERE id = $1', [id]);
+  }
+
+  async findByLogin(login: string): Promise<Avaliador | null> {
+    const result = await pool.query('SELECT * FROM avaliadores WHERE login = $1', [login]);
+    return result.rows[0] || null;
   }
 }
 

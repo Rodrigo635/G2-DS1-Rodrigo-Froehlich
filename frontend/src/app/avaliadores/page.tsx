@@ -75,7 +75,7 @@ export default function Avaliadores() {
 
         <tbody>
           {filteredAvaliadores.map((avaliador) => (
-            <tr className="hover:bg-gray-100" key={avaliador.id}>
+            <tr className="hover:bg-gray-200" key={avaliador.id}>
               <td className="px-4 text-left text-black py-2 border-b">{avaliador.id}</td>
               <td className="px-4 text-left text-black py-2 border-b">{avaliador.nome}</td>
               <td className="px-4 text-left text-black py-2 border-b">{avaliador.login}</td>
